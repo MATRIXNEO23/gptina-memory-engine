@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+/data/
+/archive/
+/raw/
+*.zip
+.DS_Store
