@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gptina-memory-engine"
+version = "0.1.0"
+description = "Read-only provenance-first memory retrieval engine for GPTina continuity data."
+requires-python = ">=3.10"
+dependencies = [
+  "mcp>=2,<3",
+]
+
+[project.scripts]
+gptina-memory-server = "gptina_memory_engine.server:main"
+gptina-memory-build = "gptina_memory_engine.builder:main"
+gptina-memory-archive = "gptina_memory_engine.archive:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+gptina_memory_engine = ["schema.sql"]
